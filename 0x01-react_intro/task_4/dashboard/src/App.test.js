@@ -1,25 +1,27 @@
-import React from 'react';
-import { render } from '@testing-library/react';
+import { shallow } from 'enzyme';
 import App from './App';
 
-test('App renders without crashing', () => {
-  render(<App />);
-});
+describe('Test App.js', () => {
+  it('App without crashing', (done) => {
+    expect(shallow(<App />).exists());
+    done();
+  });
 
-test('App renders a div with the class App-header', () => {
-  const { container } = render(<App />);
-  const headerDiv = container.querySelector('.App-header');
-  expect(headerDiv).toBeInTheDocument();
-});
+  it('div with the class App-header', (done) => {
+    const wrapper = shallow(<App />);
+    expect(wrapper.contains(<header className='App-header' />))
+    done()
+  });
 
-test('App renders a div with the class App-body', () => {
-  const { container } = render(<App />);
-  const bodyDiv = container.querySelector('.App-body');
-  expect(bodyDiv).toBeInTheDocument();
-});
+  it('div with the class App-body', (done) => {
+    const wrapper = shallow(<App />);
+    expect(wrapper.contains(<body className='App-body' />))
+    done();
+  });
 
-test('App renders a div with the class App-footer', () => {
-  const { container } = render(<App />);
-  const footerDiv = container.querySelector('.App-footer');
-  expect(footerDiv).toBeInTheDocument();
+  it('div with the class App-footer', (done) => {
+    const wrapper = shallow(<App />);
+    expect(wrapper.contains(<footer className='App-footer' />))
+    done();
+  });
 });

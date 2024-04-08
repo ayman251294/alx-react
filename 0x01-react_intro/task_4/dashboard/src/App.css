@@ -1,11 +1,10 @@
 :root {
-  --hol-red: #e1343a;
+  --holberton-red: #e1484c;
 }
 
 body {
-  max-width: 100%;
+  max-width: 90%;
   margin: 0 auto;
-  height: 100vh;
 }
 
 div {
@@ -17,55 +16,38 @@ div {
   min-height: 100vh;
 }
 
-.App-header img {
-  width: 200px;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 .App-header {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: left;
-  border-bottom: 3px solid var(--hol-red);
+  border-bottom: 3px solid var(--holberton-red);
+}
+
+.App-header img {
+  width: 150px;
 }
 
 .App-header h1 {
   margin: auto auto auto 0;
-  color: var(--hol-red);
+  color: var(--holberton-red);
 }
 
-.App-body p {
-  font-weight: bold;
-  margin: 48px 0 0 32px;
+.App-body {
+  padding: 36px 24px;
+}
+
+.App-body input {
+  margin: 0 16px 0 8px;
 }
 
 .App-footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  border-top: 3px solid var(--hol-red);
 }
 
 .App-footer p {
   text-align: center;
+  border-top: 3px solid var(--holberton-red);
   padding: 16px 0;
-}
-
-form {
-  display: flex;
-  margin: 10px 0 0 32px;
-}
-
-form label {
-  font-weight: bold;
-  justify-content: space-evenly;
-}
-
-form input {
-  margin-right: 10px;
 }
